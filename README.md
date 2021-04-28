@@ -49,7 +49,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![jSnake Screenshot](https://raw.githubusercontent.com/jihedkdiss/jSnake/main/Screenshot.png)
+![jSnake Screenshot](https://github.com/jihedkdiss/jSnake/blob/main/Screenshot.png)
 
 <b>jSnake</b> is a simple console snake game coded in Java.
 Internet access is not required. I am not responsible for any damages done to your PC while using jSnake.
