@@ -1,11 +1,18 @@
 
-import java.util.Scanner;
+import java.util.*;
 
-class Main {
+class jSnake {
 
     // Check for collision
-    public static boolean check(int x, int y) {
-        if(x < 0 || x > 9 || y < 0 || y > 9) {
+    public static boolean checkApple(int x, int y, char[][] grid) {
+        if(grid[x][y] == 'O') {
+            return true;
+        }
+        return false;
+    }
+
+    public static boolean check(int x, int y, char[][] grid) {
+        if(x < 0 || x > 9 || y < 0 || y > 9 || grid[x][y] == '#') {
             return true;
         }
         return false;
@@ -27,7 +34,10 @@ class Main {
 
         // Variable declarations
         Scanner input = new Scanner(System.in);
+        Random random = new Random();
         char grid[][] = new char[10][10];
+        char snake[][] = new char[100][100];
+        boolean apple = false;
 
         // Fill the grid with empty dots
         for (int y = 0; y < 10; y++) {
@@ -37,15 +47,28 @@ class Main {
         }
 
         // Set cursor and position
-        grid[0][0] = 'X';
-        int X = 0;
-        int Y = 0;
-        int score = 0;
+        int X = random.nextInt(10);
+        int Y = random.nextInt(10);
+        grid[X][Y] = '@';
+        snake[X][Y] = '@';
+        int score = 1;
 
         while (true) {
 
             // Print banner
             banner();
+
+            // Set random apple on grid
+            if(!apple) {
+                int appleX = random.nextInt(10);
+                int appleY = random.nextInt(10);
+                while(grid[appleX][appleY] == '#' || grid[appleX][appleY] == '@') {
+                    appleX = random.nextInt(10);
+                    appleY = random.nextInt(10);
+                }
+                grid[appleX][appleY] = 'O';
+                apple = true;
+            }
 
             // Print the current grid
             System.out.println("   +---------------------+");
@@ -61,7 +84,12 @@ class Main {
             // Print current location
             System.out.println("   | Current X: " + X + "        |");
             System.out.println("   | Current Y: " + Y + "        |");
-            System.out.println("   | Score    : " + score + "        |");
+            String currentScore = score + "";
+            System.out.print("   | Score    : " + score);
+            for (int i = 0; i < 9 - currentScore.length(); i++) {
+                System.out.print(" ");
+            }
+            System.out.println("|");
             System.out.println("   +---------------------+");
 
             // Ask for next move
@@ -72,30 +100,46 @@ class Main {
             switch (choice) {
 
                 case "d":
-                    if(check(X + 1, Y)) break;
+                    if(check(X + 1, Y, grid)) break;
+                    if(checkApple(X + 1, Y, grid)) {
+                        score++;
+                        apple = false;
+                    }
                     grid[X][Y] = '.';
-                    grid[X + 1][Y] = 'X';
+                    grid[X + 1][Y] = '@';
                     X = X + 1;
                     break;
 
                 case "q":
-                    if(check(X - 1, Y)) break;
+                    if(check(X - 1, Y, grid)) break;
+                    if(checkApple(X - 1, Y, grid)) {
+                        score++;
+                        apple = false;
+                    }
                     grid[X][Y] = '.';
-                    grid[X - 1][Y] = 'X';
+                    grid[X - 1][Y] = '@';
                     X = X - 1;
                     break;
 
                 case "z":
-                    if(check(X, Y - 1)) break;
+                    if(check(X, Y - 1, grid)) break;
+                    if(checkApple(X, Y - 1, grid)) {
+                        score++;
+                        apple = false;
+                    }
                     grid[X][Y] = '.';
-                    grid[X][Y - 1] = 'X';
+                    grid[X][Y - 1] = '@';
                     Y = Y - 1;
                     break;
 
                 case "s":
-                    if(check(X, Y + 1)) break;
+                    if(check(X, Y + 1, grid)) break;
+                    if(checkApple(X, Y + 1, grid)) {
+                        score++;
+                        apple = false;
+                    }
                     grid[X][Y] = '.';
-                    grid[X][Y + 1] = 'X';
+                    grid[X][Y + 1] = '@';
                     Y = Y + 1;
                     break;
 
@@ -110,7 +154,7 @@ class Main {
             } catch (Exception e) {
                 System.exit(0);
             }
-            
+
         }
     }
 }
