@@ -36,7 +36,6 @@ class jSnake {
         Scanner input = new Scanner(System.in);
         Random random = new Random();
         char grid[][] = new char[10][10];
-        char snake[][] = new char[100][100];
         boolean apple = false;
 
         // Fill the grid with empty dots
@@ -50,7 +49,6 @@ class jSnake {
         int X = random.nextInt(10);
         int Y = random.nextInt(10);
         grid[X][Y] = '@';
-        snake[X][Y] = '@';
         int score = 1;
 
         while (true) {
