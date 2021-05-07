@@ -10,6 +10,33 @@ class jSnake {
         }
         return false;
     }
+    
+    // Function to clear the terminal screen based on operating system
+    public static void clearScreen() {
+        if(System.getProperty("os.name").equals("Linux")) {
+			try {
+				new ProcessBuilder("clear").inheritIO().start().waitFor();
+			} catch (Exception e) {
+				banner();
+				System.out.println("   [ Error Occured ]");
+	            System.out.println("   " + e);
+	            System.exit(1);
+			}
+        } else if(System.getProperty("os.name").equals("Windows") {
+			try {
+				new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+			} catch (Exception e) {
+				banner();
+                System.out.println("   [ Error Occured ]");
+	            System.out.println("   " + e);
+	            System.exit(1);
+			}
+		} else {
+		    System.out.println("   [ Error Occured ]");
+		    System.out.println("   System not recognised. Leaving...");
+            System.exit(1);
+		}
+    }
 
     public static boolean check(int x, int y, char[][] grid) {
         if(x < 0 || x > 9 || y < 0 || y > 9 || grid[x][y] == '#') {
