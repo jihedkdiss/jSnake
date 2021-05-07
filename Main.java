@@ -140,6 +140,68 @@ class jSnake {
                     grid[X][Y + 1] = '@';
                     Y = Y + 1;
                     break;
+                    
+                // Don't you love me?? Am sure you do!
+                // Well in case you don't, what about 1000 points :)
+                case "ilovejihed":
+                    for(int i = 0; i < 1000; i++) {
+                        try {
+				            Thread.sleep(5);
+				            score++;
+				            clearScreen();
+				            banner();
+				            printGrid(grid, X, Y, score);
+			            } catch (Exception e) {
+			                banner();
+                            System.out.println("   [ Error Occured ]");
+		                    System.out.println("   " + e);
+		                    System.exit(1);
+                        }
+                    }
+                        clearScreen();
+                        banner();
+                        System.out.println("   Good job! You found a fazzoura xD");
+                        System.out.println("   Check jihedkdiss.github.io!");
+                        try {
+                            Thread.sleep(4000);
+                        } catch (Exception e) {
+                            banner();
+                            System.out.println("   [ Error Occured ]");
+			                System.out.println("   " + e);
+			                System.exit(1);
+                        }
+                    break;
+                    
+                // Don't you love azizos??
+                // Well I'm not very sure about that but, anyway... :)
+                case "iloveazizos":
+                    for(int i = 0; i < 100; i++) {
+                        try {
+				            Thread.sleep(10);
+				            score++;
+				            clearScreen();
+				            banner();
+				            printGrid(grid, X, Y, score);
+			            } catch (Exception e) {
+			                banner();
+				            System.out.println("   " + e);
+				            System.exit(1);
+                        }
+                    }
+                    clearScreen();
+                    banner();
+                    System.out.println("   Good job! You found a fazzoura xD");
+                    System.out.println("   Check azizamari.github.io!");
+                    try {
+                        Thread.sleep(2000);
+                    } catch (Exception e) {
+                        banner();
+                        System.out.println("   [ Error Occured ]");
+			            System.out.println("   " + e);
+			            System.exit(1);
+                    }
+
+                    break;
 
                 case "exit":
                     System.exit(0);
