@@ -62,11 +62,12 @@ You can help keep the jSnake hanging. Star this repository! 🌟
 * [Java](https://en.wikipedia.org/wiki/Java_(programming_language))
 
 ## Usage
-1. Launch jSnake by typing `jSnake` in the command prompt or double clicking the `jSnake.bat` file
-2. Click Yes if prompted by UAC (Administrator priviliges are not required by default)
-3. jSnake will display the current grid and ask for a command
-4. Just move with Z, Q, S, D and discover the easter eggs!
-5. Once done type `exit` to leave or `restart` for a new game.
+1. Get the code, then compile and run jSnake by typing `javac jSnake.java && java jSnake`
+2. On Windows, run the batch file `jSnake.bat` and it will take care of everything
+3. Click Yes if prompted by UAC (Administrator priviliges are not required by default)
+4. jSnake will display the grid and wait for a move
+5. Just move with Z, Q, S, D and discover the ✨ easter eggs ✨
+6. Once done type `exit` to close or `restart` for a new game.
 
 
 <!-- ROADMAP -->
