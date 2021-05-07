@@ -3,7 +3,7 @@ import java.util.*;
 
 class jSnake {
 
-    // Check for collision
+    // Check for apple
     public static boolean checkApple(int x, int y, char[][] grid) {
         if(grid[x][y] == 'O') {
             return true;
@@ -11,6 +11,7 @@ class jSnake {
         return false;
     }
 
+    // Check for collision
     public static boolean check(int x, int y, char[][] grid) {
         if(x < 0 || x > 9 || y < 0 || y > 9 || grid[x][y] == '#') {
             return true;
@@ -28,6 +29,23 @@ class jSnake {
             "   _/ |____/|_| |_|\\__,_|_|\\_\\___|\n"  +
             "  |__/        Coded by @jihedkdiss\n"
         );
+    }
+    
+    // Fake Loading Animation (Duration: 1s ~ 15s)
+    public static void loadingAnimation() {
+        System.out.println("   Loading...");
+        System.out.print("   ");
+        for(int i = 0; i < random.nextInt(15); i++) {
+            System.out.print("~ ");
+            try {
+				Thread.sleep(500);
+			} catch (Exception e) {
+				banner();
+                System.out.println("   [ Error Occured ]");
+	            System.out.println("   " + e);
+	            System.exit(1);
+			}
+        }
     }
 
     public static void main(String[] args) {
