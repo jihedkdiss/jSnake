@@ -215,11 +215,26 @@ class jSnake {
                     } catch (Exception e) {
                         banner();
                         System.out.println("   [ Error Occured ]");
-			            System.out.println("   " + e);
-			            System.exit(1);
+			                  System.out.println("   " + e);
+			                  System.exit(1);
                     }
-
-                    break;
+                
+                // This will set score to 0 and generate new positions
+                case "restart":
+                    clearScreen();
+                    grid[X][Y] = '.';
+                    X = random.nextInt(10);
+                    Y = random.nextInt(10);
+                    grid[X][Y] = '@';
+                    grid[appleX][appleY] = '.';
+                    int appleY = random.nextInt(10);
+                    int appleX = random.nextInt(10);
+                    while(grid[appleX][appleY] == '@') {
+                        appleX = random.nextInt(10);
+                        appleY = random.nextInt(10);
+                    }
+                    grid[appleX][appleY] = 'O';
+                    score = 0;
 
                 case "exit":
                     System.exit(0);
