@@ -4,7 +4,7 @@ class jSnake {
 
     // Check if the next move is an apple
     public static boolean checkApple(int x, int y, char[][] grid) {
-        if (grid[x][y] == 'O') {
+        if (grid[x][y] == 'o') {
             return true;
         }
         return false;
@@ -142,7 +142,7 @@ class jSnake {
                     appleX = random.nextInt(10);
                     appleY = random.nextInt(10);
                 }
-                grid[appleX][appleY] = 'O';
+                grid[appleX][appleY] = 'o';
                 apple = true;
             }
 
@@ -272,7 +272,7 @@ class jSnake {
                         appleX = random.nextInt(10);
                         appleY = random.nextInt(10);
                     }
-                    grid[appleX][appleY] = 'O';
+                    grid[appleX][appleY] = 'o';
                     score = 0;
                     break;
 
