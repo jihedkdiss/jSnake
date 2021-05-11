@@ -9,7 +9,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/jihedkdiss/jSnake">
-    <img src="https://github.com/jihedkdiss/jSnake/blob/main/Logo.png" alt="Logo" width="80" height="80">
+    <img src="https://github.com/jihedkdiss/jSnake/blob/main/Pictures/Logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">jSnake</h3>
@@ -49,7 +49,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![jSnake Screenshot](https://github.com/jihedkdiss/jSnake/blob/main/Screenshot.png)
+![jSnake Screenshot](https://github.com/jihedkdiss/jSnake/blob/main/Pictures/Screenshot.png)
 
 <b>jSnake</b> is a simple console snake game coded in Java.
 Internet access is not required. I am not responsible for any damages done to your PC while using jSnake.
@@ -62,8 +62,8 @@ You can help keep the jSnake hanging. Star this repository! 🌟
 * [Java](https://en.wikipedia.org/wiki/Java_(programming_language))
 
 ## Usage
-1. Get the code, then compile and run jSnake by typing `javac jSnake.java && java jSnake`
-2. On Windows, run the batch file `jSnake.bat` and it will take care of everything
+1. Make sure you have `javac` and `java` executables installed and configured
+2. Download the code, then compile and run jSnake by typing `javac jSnake.java && java jSnake`
 3. Click Yes if prompted by UAC (Administrator priviliges are not required by default)
 4. jSnake will display the grid and wait for a move
 5. Just move with Z, Q, S, D and discover the ✨ easter eggs ✨
