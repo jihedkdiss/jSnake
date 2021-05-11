@@ -12,7 +12,7 @@ class jSnake {
 
     // Print the formatted grid with current location & score
     public static void printGrid(char[][] grid, int X, int Y, int score) {
-        //Print the grid and walls
+        // Print the grid and walls
         System.out.println("   +---------------------+");
         for (int y = 0; y < 10; y++) {
             System.out.print("   |");
