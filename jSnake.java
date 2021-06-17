@@ -199,6 +199,50 @@ class jSnake {
                     grid[X][Y + 1] = '@';
                     Y = Y + 1;
                     break;
+                    
+                case "D":
+                    if (checkWall(X + 1, Y, grid)) break;
+                    if (checkApple(X + 1, Y, grid)) {
+                        score++;
+                        apple = false;
+                    }
+                    grid[X][Y] = '.';
+                    grid[X + 1][Y] = '@';
+                    X = X + 1;
+                    break;
+
+                case "Q":
+                    if (checkWall(X - 1, Y, grid)) break;
+                    if (checkApple(X - 1, Y, grid)) {
+                        score++;
+                        apple = false;
+                    }
+                    grid[X][Y] = '.';
+                    grid[X - 1][Y] = '@';
+                    X = X - 1;
+                    break;
+
+                case "Z":
+                    if (checkWall(X, Y - 1, grid)) break;
+                    if (checkApple(X, Y - 1, grid)) {
+                        score++;
+                        apple = false;
+                    }
+                    grid[X][Y] = '.';
+                    grid[X][Y - 1] = '@';
+                    Y = Y - 1;
+                    break;
+
+                case "S":
+                    if (checkWall(X, Y + 1, grid)) break;
+                    if (checkApple(X, Y + 1, grid)) {
+                        score++;
+                        apple = false;
+                    }
+                    grid[X][Y] = '.';
+                    grid[X][Y + 1] = '@';
+                    Y = Y + 1;
+                    break;
 
                 // You love me, right?
                 // You don't!? Well, what about 1K points??
