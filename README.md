@@ -56,6 +56,11 @@ Internet access is not required. I am not responsible for any damages done to yo
 Bug reports, suggestions and tips are always welcome!
 You can help keep the jSnake hanging. Star this repository! 🌟
 
+### Features
+
+* Runs on every major platform, the cloud, basically anywhere (try jSnake on mobile using Termux!)
+* Easy controls and manipulation
+* Contains funny easter eggs! (you can add your own, we might start calling em cheat codes)
 
 ### Built With
 
