@@ -202,7 +202,7 @@ class jSnake {
                     grid[X][Y + 1] = '@';
                     Y = Y + 1;
                     break;
-                    
+
                 case "D":
                     if (checkWall(X + 1, Y, grid)) break;
                     if (checkApple(X + 1, Y, grid)) {
@@ -248,37 +248,8 @@ class jSnake {
                     break;
 
                 // You love me, right?
-                // You don't!? Well, what about 1K points??
-                case "ilovejihed":
-                    for (int i = 0; i < 1000; i++) {
-                        try {
-                            Thread.sleep(5);
-                            score++;
-                            clearScreen();
-                            banner();
-                            printGrid(grid, X, Y, score);
-                        } catch (Exception e) {
-                            banner();
-                            System.out.println("   " + e);
-                            System.exit(1);
-                        }
-                    }
-                    clearScreen();
-                    banner();
-                    System.out.println("   Good job! You found a fazzoura xD");
-                    System.out.println("   Check jihedkdiss.github.io!");
-                    try {
-                        Thread.sleep(4000);
-                    } catch (Exception e) {
-                        banner();
-                        System.out.println("   " + e);
-                        System.exit(1);
-                    }
-                    break;
-
-                // You love azizos, right?
                 // You don't!? Well, what about 100 points??
-                case "iloveazizos":
+                case "ilovejihed":
                     for (int i = 0; i < 100; i++) {
                         try {
                             Thread.sleep(10);
@@ -295,9 +266,38 @@ class jSnake {
                     clearScreen();
                     banner();
                     System.out.println("   Good job! You found a fazzoura xD");
-                    System.out.println("   Check azizamari.github.io!");
+                    System.out.println("   Check jihedkdiss.ml!");
                     try {
-                        Thread.sleep(2000);
+                        Thread.sleep(4000);
+                    } catch (Exception e) {
+                        banner();
+                        System.out.println("   " + e);
+                        System.exit(1);
+                    }
+                    break;
+
+                // You love azizos, right?
+                // You don't!? Well, what about 50 points??
+                case "iloveazizos":
+                    for (int i = 0; i < 50; i++) {
+                        try {
+                            Thread.sleep(10);
+                            score++;
+                            clearScreen();
+                            banner();
+                            printGrid(grid, X, Y, score);
+                        } catch (Exception e) {
+                            banner();
+                            System.out.println("   " + e);
+                            System.exit(1);
+                        }
+                    }
+                    clearScreen();
+                    banner();
+                    System.out.println("   Good job! You found a fazzoura xD");
+                    System.out.println("   Check azizamari.tn!");
+                    try {
+                        Thread.sleep(4000);
                     } catch (Exception e) {
                         banner();
                         System.out.println("   " + e);
