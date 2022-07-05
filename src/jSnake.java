@@ -103,6 +103,9 @@ class jSnake {
 
     public static void main(String[] args) {
 
+        // jColors setup
+        jcolors.setup();
+
         // Variable declarations
         Scanner input = new Scanner(System.in);
         char grid[][] = new char[10][10];
@@ -249,6 +252,7 @@ class jSnake {
 
                 // You love me, right?
                 // You don't!? Well, what about 100 points??
+                case "ilovejio":
                     for (int i = 0; i < 100; i++) {
                         try {
                             Thread.sleep(10);
