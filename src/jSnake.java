@@ -1,4 +1,5 @@
 import java.util.*;
+import jcolors.*;
 
 class jSnake {
 
@@ -70,7 +71,7 @@ class jSnake {
                 System.out.println("   " + e);
                 System.exit(1);
             }
-        } else if (System.getProperty("os.name").equals("Windows")) {
+        } else if (System.getProperty("os.name").contains("Windows")) {
             try {
                 new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
             } catch (Exception e) {
@@ -87,14 +88,14 @@ class jSnake {
 
     // Print banner
     public static void banner() {
-        System.out.println(
-            "     _ ____              _\n" +
-            "    (_) ___| _ __   __ _| | _____\n" +
-            "    | \\___ \\| '_ \\ / _` | |/ / _ \\\n" +
-            "    | |___) | | | | (_| |   <  __/\n" +
-            "   _/ |____/|_| |_|\\__,_|_|\\_\\___|\n" +
-            "  |__/        Coded by @jihedkdiss\n"
-        );
+        String banner = "     _ ____              _\n" +
+                        "    (_) ___| _ __   __ _| | _____\n" +
+                        "    | \\___ \\| '_ \\ / _` | |/ / _ \\\n" +
+                        "    | |___) | | | | (_| |   <  __/\n" +
+                        "   _/ |____/|_| |_|\\__,_|_|\\_\\___|\n" +
+                        "  |__/        Coded by @jihedkdiss\n";
+        banner = fgColors.yellow(banner);
+        System.out.println(banner);
     }
 
     // Randomness generator
@@ -150,8 +151,10 @@ class jSnake {
             printGrid(grid, X, Y, score);
 
             // Ask for next move
+            inputColors.yellow();
             System.out.print("   > ");
             String choice = input.next();
+            inputColors.close();
 
             // Check user input and perform move
             switch (choice) {
