@@ -249,7 +249,6 @@ class jSnake {
 
                 // You love me, right?
                 // You don't!? Well, what about 100 points??
-                case "ilovejihed":
                     for (int i = 0; i < 100; i++) {
                         try {
                             Thread.sleep(10);
