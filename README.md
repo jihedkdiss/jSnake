@@ -9,7 +9,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/jihedkdiss/jSnake">
-    <img src="https://github.com/jihedkdiss/jSnake/blob/main/Pictures/Logo.png" alt="Logo" width="80" height="80">
+    <img src="Pictures/Logo.png" alt="Logo" width="80" height="80">
   </a>
 
   <h3 align="center">jSnake</h3>
@@ -49,7 +49,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![jSnake Screenshot](https://github.com/jihedkdiss/jSnake/blob/main/Pictures/Screenshot.png)
+![jSnake Screenshot](Pictures/Screenshot.png)
 
 <b>jSnake</b> is a simple console snake game coded in Java.
 Internet access is not required. I am not responsible for any damages done to your PC while using jSnake.
